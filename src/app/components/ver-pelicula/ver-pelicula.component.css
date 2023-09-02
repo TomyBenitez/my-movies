@@ -1,0 +1,125 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.star{
+    font-size: 22px;
+    color: #ff9800;
+    border: none;
+}
+
+.contenedor{
+	margin: 1rem;
+    padding: 15px;
+	gap: 0.5rem;
+    background-color: #181818;
+    border-radius: 4px;
+}
+
+.imagenContainer{
+    display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+    margin: 10px;
+}
+
+.principal{
+    position: relative;
+	overflow: hidden;
+	display: flex;
+}
+
+.detalles{
+    margin: 10px;
+    color: #EEE;
+    text-align: justify;
+    background-color: #313131;
+    padding: 0px 15px 0px 15px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(10,10,10,.8);
+    width: 100%;
+}
+
+h1{
+    font-size: 36px;
+	font-weight: bold;
+	margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+span.pelicula-fecha{
+	margin-top: 5px;
+	font-size: .8rem;
+    color: #EEE;
+	padding: 4px;
+	border-radius: 3px;
+	background-image: linear-gradient(to top right, rgba(232, 93, 93,0.6), rgba(240, 128, 128,0.6));
+	position: absolute;
+}
+
+ul{
+    display: inline-block;
+}
+
+li{
+    list-style-type: none;
+    margin: 5px;
+    background-image: linear-gradient(to top right, rgba(232, 93, 93,0.8), rgba(240, 128, 128,0.8));
+    box-shadow: 0px 0px 8px rgba(10,10,10,1);
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.credits{
+    margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.actores{
+	width: 150px;
+	background-color: #181818;
+	color: #EEE;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+	box-shadow: 0px 0px 8px rgba(10,10,10,.6);
+}
+
+.tarjeta-Actor{
+	width: 140px;
+	height: 200px;
+	background-color: #313131;
+	border-start-start-radius: .2rem;
+	border-start-end-radius: .2rem;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-end;
+}
+
+.fotoActor{
+    width: 140px;
+	height: auto;
+	position: absolute;
+	background-size: cover;
+}
+
+.nombreActores{
+    font-style: normal;
+    text-align: left;
+    align-items: center;
+}
+
+@font-face {
+	font-family: ExampleFont;
+	src: url(/path/to/fonts/examplefont.woff) format('woff'),
+		 url(/path/to/fonts/examplefont.eot) format('eot');
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}

@@ -1,0 +1,11 @@
+<h1 class="titulo">Películas Populares</h1>
+<hr>
+<div class="contenedor" *ngIf="peliculas">
+	<div class="tarjeta" *ngFor="let pelicula of peliculas">
+		<div class="peli-tarjeta" (click)="verDetalle(pelicula.id)">
+			<img class="peli-poster" [src]="image_Base_Url+pelicula.poster_path" [alt]="pelicula.title">
+            <span class="pelicula-fecha">{{pelicula.release_date | date}}</span>
+		</div>
+		<h2 class="pelicula-titulo">{{pelicula.title}}</h2>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+.navigation{
+    display: flex;
+    padding: 1rem 3rem;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to top right, #E85D5D, #F08080);
+    color: #EEE;
+    font-family: sans-serif;
+}
+
+.navigation ul a{
+    color: #EEE;
+}
+
+.navigation h1{
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navigation ul{
+    list-style: none;
+}
+
+.navigation ul li{
+    float: left;
+    padding: 1rem;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.navigation ul li.activa{
+    background: #E85D5D;
+    border-radius: 50px;
+}
+
+.navigation ul li:hover{
+    background: #E85D5D;
+    transition-duration: 200ms;
+    border-radius: 50px;
+}

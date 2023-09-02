@@ -1,0 +1,40 @@
+<div class="contenedor" *ngIf="details">
+    <div class="principal">
+        <div class="imagenContainer">
+            <img [src]="image_Base_Url_400+details.poster_path" [alt]="details.title">
+            <span class="pelicula-fecha">{{details.release_date | date}}</span>
+        </div>
+        <div class="detalles">
+            <h1>{{details.title}}</h1>
+            <hr>
+            <br>
+            <h3>Descripción: {{details.overview}}</h3>
+            <br>
+            <p class="idioma">Idioma: {{details.original_language}}</p>
+            <p class="puntuacion">Puntuación: <span class="star">☆{{RoundNumber(details.vote_average)}}</span></p>
+            <p class="votos">Votos: {{details.vote_count}}</p>
+            <ul *ngFor="let genre of details.genres">
+                <li class="generos">{{genre.name}}</li>
+            </ul>
+            <div class="Trailer" *ngIf="videosMovies">
+                <h1>Videos</h1>
+                <hr><br>
+                <iframe *ngFor="let video of videosMovies" width="560" height="315" [src]="this.sanitizer.bypassSecurityTrustResourceUrl(youtube_base_url+video.key)" [title]="video.name" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h1>Actores</h1>
+            <hr><br>
+            <div class="credits" *ngIf="credits">
+                <div class="actores" *ngFor="let actor of credits.cast">
+                    <div class="tarjeta-Actor">
+                        <img class="fotoActor" [src]="image_Base_Url_200+actor.profile_path" [alt]="actor.name">
+                    </div>
+                    <div class="nombreActores">
+                        <h3>Nombre: {{actor.name}}</h3>
+                        <p>Personaje: {{actor.character}}</p>
+                        <p>Profesión: {{actor.known_for_department}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<!-- NAVEGACION -->
+<app-navegacion></app-navegacion>
+<!-- ROUTER -->
+
+<div class="navigation">
+    
+    <div>
+        <a routerLink="inicio" style="text-decoration:none; color: #EEE;"><h1>P<img src="../favicon.ico" alt="Popcorns" width="32px">pcornFilms</h1></a>
+    </div>
+
+    <div>
+        <ul>
+            <a routerLink="inicio"><li routerLinkActive="activa">Inicio</li></a>
+            <a routerLink="peliculas"><li routerLinkActive="activa">Películas</li></a>
+        </ul>
+    </div>
+</div>
+<router-outlet></router-outlet>
